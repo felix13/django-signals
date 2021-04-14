@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<ul>
+    {% for book in books %}
+     <li> {{ book.name }} </li>
+    {% empty %}
+     <li>Sorry, no books in this list , add a book with the button below</li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'add_book' %}">add book</a>
+
+{% endblock %}
